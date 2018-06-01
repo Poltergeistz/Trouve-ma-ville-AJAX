@@ -49,23 +49,23 @@ btn.addEventListener('click', function () {
 
 
 // EVENT CLICK DISTANCE
-// btnDistance.addEventListener('click', function(){
-//     var request = new XMLHttpRequest();
+btnDistance.addEventListener('click', function(){
+    var request = new XMLHttpRequest();
 
-//     request.open('GET', apiLocation);
-//     request.onload = function () {
-//         var dataLocation = JSON.parse(request.responseText);
-//         console.log(dataLocation);
+    request.open('GET', apiLocation);
+    request.onload = function () {
+        var dataLocation = JSON.parse(request.responseText);
+        console.log(dataLocation);
 
-//         var distance = dataLocation.rows[0].elements[0].distance.text;
-//         var duration = dataLocation.rows[0].elements.duration.text;
-//         console.log(distance);
-//         console.log(duration);
-//         var format = "<br>" + "Distance : " + distance + "KM" + "<br>" + "Durée : " + duration;
+        var distance = dataLocation.rows[0].elements[0].distance.text;
+        var duration = dataLocation.rows[0].elements.duration.text;
+        console.log(distance);
+        console.log(duration);
+        var format = "<br>" + "Distance : " + distance + "KM" + "<br>" + "Durée : " + duration;
 
-//         distContainer.innerHTML = format;
+        distContainer.innerHTML = format;
 
-//     };
-//     request.send();
-// });
+    };
+    request.send();
+});
 
